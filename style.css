@@ -3,35 +3,43 @@ body {
   font-family: "Cormorant Garamond", serif;
   background-color: #fffaf9;
   color: #444;
+  line-height: 1.6;
 }
 
 /* HERO */
 .hero {
-  background-image: url('hero.jpg'); /* imaginea de fundal */
+  background-image: url('hero.jpg');
   background-position: center;
   background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .overlay {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 30px;
   border-radius: 12px;
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 .overlay h1 {
   font-size: 3rem;
   color: #b76e79;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .overlay .subtitle {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #555;
 }
 
@@ -53,12 +61,12 @@ section {
 .text h2 {
   font-size: 2rem;
   color: #b76e79;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .text p {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .photo {
@@ -106,6 +114,7 @@ section {
 
 .grid img:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* CONFIRMARE */
@@ -134,11 +143,12 @@ section {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
   background: #a15f68;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
@@ -151,6 +161,24 @@ footer {
 }
 
 /* 🔹 RESPONSIVITATE 🔹 */
+@media (max-width: 1024px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  section {
+    padding: 60px 8%;
+  }
+
+  .photo img {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 70vh;
@@ -160,16 +188,13 @@ footer {
     font-size: 2rem;
   }
 
+  .overlay .subtitle {
+    font-size: 1.1rem;
+  }
+
   section {
     flex-direction: column;
     padding: 50px 5%;
-  }
-
-  .photo img {
-    max-width: 100%;
-  }
-
-  .text, .photo {
     text-align: center;
   }
 
@@ -192,3 +217,5 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+
