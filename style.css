@@ -1,12 +1,18 @@
-body {
+/* 🔹 RESET DE BAZĂ 🔹 */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Cormorant Garamond", serif;
   background-color: #fffaf9;
   color: #444;
   line-height: 1.6;
 }
 
-/* HERO */
+/* 🔹 HERO 🔹 */
 .hero {
   background-image: url('hero.jpg');
   background-position: center;
@@ -23,6 +29,7 @@ body {
   padding: 40px 30px;
   border-radius: 12px;
   text-align: center;
+  max-width: 90%;
   opacity: 0;
   animation: fadeIn 1.5s forwards;
 }
@@ -43,19 +50,19 @@ body {
   color: #555;
 }
 
-/* SECTIUNI CU TEXT SI POZA */
+/* 🔹 SECTIUNI TEXT + POZA 🔹 */
 section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
   padding: 80px 10%;
-  flex-wrap: wrap;
 }
 
-.text {
-  flex: 1;
-  min-width: 250px;
+.text, .photo {
+  flex: 1 1 300px;
+  text-align: left;
 }
 
 .text h2 {
@@ -67,11 +74,6 @@ section {
 .text p {
   font-size: 1.1rem;
   line-height: 1.8;
-}
-
-.photo {
-  flex: 1;
-  text-align: center;
 }
 
 .photo img {
@@ -86,7 +88,7 @@ section {
   transform: scale(1.03);
 }
 
-/* GALERIE */
+/* 🔹 GALERIE 🔹 */
 .gallery {
   text-align: center;
   background-color: #f9f1f3;
@@ -117,7 +119,7 @@ section {
   cursor: pointer;
 }
 
-/* CONFIRMARE */
+/* 🔹 CONFIRMARE 🔹 */
 .confirm {
   text-align: center;
   padding: 80px 10%;
@@ -151,7 +153,7 @@ section {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* FOOTER */
+/* 🔹 FOOTER 🔹 */
 footer {
   background-color: #f4e3e7;
   text-align: center;
@@ -162,60 +164,32 @@ footer {
 
 /* 🔹 RESPONSIVITATE 🔹 */
 @media (max-width: 1024px) {
-  .hero {
-    height: 80vh;
-  }
-
-  .overlay h1 {
-    font-size: 2.5rem;
-  }
-
-  section {
-    padding: 60px 8%;
-  }
-
-  .photo img {
-    max-width: 100%;
-  }
+  .hero { height: 80vh; }
+  .overlay h1 { font-size: 2.5rem; }
+  section { padding: 60px 8%; }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    height: 70vh;
-  }
-
-  .overlay h1 {
-    font-size: 2rem;
-  }
-
-  .overlay .subtitle {
-    font-size: 1.1rem;
-  }
+  .hero { height: 70vh; }
+  .overlay h1 { font-size: 2rem; }
+  .overlay .subtitle { font-size: 1.1rem; }
 
   section {
     flex-direction: column;
-    padding: 50px 5%;
     text-align: center;
+    padding: 50px 5%;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  .text, .photo { text-align: center; }
+  .grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  .overlay h1 {
-    font-size: 1.7rem;
-  }
-
-  .overlay .subtitle {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
+  .overlay h1 { font-size: 1.7rem; }
+  .overlay .subtitle { font-size: 1rem; }
+  .btn { padding: 10px 20px; font-size: 0.9rem; }
 }
+
+
 
 
