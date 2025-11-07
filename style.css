@@ -1,160 +1,194 @@
 body {
-    margin: 0;
-    font-family: "Cormorant Garamond", serif;
-    background-color: #fffaf9;
-    color: #444;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  background-color: #fffaf9;
+  color: #444;
 }
 
 /* HERO */
 .hero {
-    background-position: center;
-    height: 150vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-   
-   
+  background-image: url('hero.jpg'); /* imaginea de fundal */
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay {
-    background-color: rgb(244, 240, 240);
-    color: #ffffff;
-    text-align: center;
-    padding: 0;
-    border-radius: 0;
-    margin: 0;
-   
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
 }
 
 .overlay h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
+  font-size: 3rem;
+  color: #b76e79;
+  margin-bottom: 0.5rem;
 }
 
 .overlay .subtitle {
-    font-style: italic;
-    font-size: 1.3rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 /* SECTIUNI CU TEXT SI POZA */
 section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 80px 10%;
-    flex-wrap: wrap;
-}
-
-.intro, .event {
-    background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 10%;
+  flex-wrap: wrap;
 }
 
 .text {
-    flex: 1;
-    min-width: 300px;
+  flex: 1;
+  min-width: 250px;
 }
 
 .text h2 {
-    font-size: 2rem;
-    color: #b76e79;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #b76e79;
+  margin-bottom: 1rem;
 }
 
 .text p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .photo {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .photo img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
 }
 
 .photo img:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 /* GALERIE */
 .gallery {
-    text-align: center;
-    background-color: #f9f1f3;
-    padding: 70px 10%;
+  text-align: center;
+  background-color: #f9f1f3;
+  padding: 80px 10%;
 }
 
 .gallery h2 {
-    color: #b76e79;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
+  color: #b76e79;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .grid img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .grid img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* CONFIRMARE */
 .confirm {
-    text-align: center;
-    padding: 70px 20px;
+  text-align: center;
+  padding: 80px 10%;
 }
 
 .confirm h2 {
-    font-size: 2rem;
-    color: #b76e79;
+  font-size: 2rem;
+  color: #b76e79;
+  margin-bottom: 20px;
 }
 
 .confirm img {
-width: 60px;
-height: 60px;
-
-
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 15px;
-    background: #b76e79;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
+  display: inline-block;
+  background: #b76e79;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-    background: #a15f68;
+  background: #a15f68;
 }
 
 /* FOOTER */
 footer {
-    background-color: #f4e3e7;
+  background-color: #f4e3e7;
+  text-align: center;
+  padding: 25px;
+  font-style: italic;
+  color: #333;
+}
+
+/* 🔹 RESPONSIVITATE 🔹 */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+
+  .photo img {
+    max-width: 100%;
+  }
+
+  .text, .photo {
     text-align: center;
-    padding: 25px;
-    font-style: italic;
-    color: #333;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay h1 {
+    font-size: 1.7rem;
+  }
+
+  .overlay .subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
